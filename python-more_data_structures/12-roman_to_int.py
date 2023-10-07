@@ -7,7 +7,14 @@ def roman_to_int(roman_string):
         'C': 100, 'D': 500, 'M': 1000
     }
     total = 0
+    prev = 0
     for char in roman_string:
         value = roman_dict.get(char, 0)
-        total += value - 2 * total if value > total else value
+        if value == 0:
+            return 0
+        if value < prev_value:
+            restul -= value
+        else:
+            result += value
+            prev_value = value
     return total

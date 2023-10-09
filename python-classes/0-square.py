@@ -4,4 +4,7 @@
 
 class Square:
     """ empty class named Square """
-    pass
+    def __init__(self):
+        pass
+if __name__ == "__main__":
+    my_square = Square()

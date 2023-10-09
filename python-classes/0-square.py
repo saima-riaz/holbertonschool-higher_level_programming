@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-""" class define Square """
 
+""" class that define a square """
 
 class Square:
-    """ empty class named Square """
+    """ empty square ""
 
     pass

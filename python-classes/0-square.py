@@ -1,12 +1,21 @@
 #!/usr/bin/python3
-"""define class square"""
+"""
+define class square
+
+"""
 
 
 class Square:
-    """define empty square"""
+    """
+    define empty square
+
+    """
 
     def__init__(self):
-        """initalizes an instance of the square class"""
+        """
+        initalizes an instance of the square class
+
+        """
 
         pass
 

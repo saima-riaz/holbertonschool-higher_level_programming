@@ -2,5 +2,5 @@
 """define class square"""
 
 
-class Sqare:
-    """define empty sqare"""
+class Square:
+    """define empty square"""

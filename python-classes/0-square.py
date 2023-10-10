@@ -13,8 +13,7 @@ class Square:
         """
         initalizes an instance of the square class
         """
-
         pass
 
     if__name__ == "__main__":
-        my_Square = Square():
+        my_Square = Square()

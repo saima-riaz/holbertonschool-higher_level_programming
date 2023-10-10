@@ -5,6 +5,10 @@
 
 
 class Square:
+    def area(self):
+            """initalizes square area"""
+            return self.__size ** 2
+
     def __int__(self, size=0):
         """initalizes a new square"""
 
@@ -15,7 +19,3 @@ class Square:
 
         else:
             self.__size = size
-
-        def area(self):
-            """initalizes square area"""
-            return self.__size ** 2

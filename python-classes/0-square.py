@@ -1,10 +1,6 @@
 #!/usr/bin/python3
-""" class  defines a square """
+"""define class square"""
 
 
-class Square:
-    """ empty class named Square """
-    def __init__(self):
-        pass
-if __name__ == "__main__":
-    my_square = Square()
+class Sqare:
+    """define empty sqare"""

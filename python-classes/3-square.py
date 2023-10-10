@@ -1,16 +1,15 @@
 #!/usr/bin/python3
-"""A class representing a square"""
+'''this module define an empty class'''
 
 
 class Square:
-
+    '''
+    this class represent a square
+    '''
     def area(self):
-        """define square area"""
         return self.__size ** 2
 
     def __init__(self, size=0):
-        """Initializes a new Square"""
-
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
         elif size < 0:

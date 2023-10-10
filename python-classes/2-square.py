@@ -6,13 +6,15 @@
 
 class Square:
     def __int__(self, size=0):
-        self.__size = size
         """initalizes a new square"""
 
-        if not isinstance(self.__size, int):
+        if not isinstance(self, int):
             raise TypeError("size must be an integer")
-        if size < 0:
+        elif size < 0:
             raise ValueError("size must be >= 0")
+
+        else:
+            self.__size = size
 
         def area(self):
             """initalizes square area"""

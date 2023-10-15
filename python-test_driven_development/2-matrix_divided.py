@@ -6,10 +6,9 @@
 
 
 def matrix_divided(matrix, div):
-    """validation"""
     if not all(
             isinstance(row, list) and all(
-                isinstance(x, (int, float)) for x in row
+                isinstance(num, (int, float)) for num in row
                 ) for row in matrix
             ):
         raise TypeError(
@@ -22,7 +21,7 @@ def matrix_divided(matrix, div):
 
     if div == 0:
         raise ZeroDivisionError("division by zero")
-    """create matrix"""
-    result = [[round(x / div, 2) for x in row] for row in matrix]
+
+    result = [[round(num / div, 2) for num in row] for row in matrix]
 
     return result

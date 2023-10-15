@@ -1,8 +1,15 @@
 #!/usr/bin/python3
+"""Divide all elements of a matrix by a given divisor
+    matrix (list of lists): The matrix to be divided
+    div (int or float): The divisor for the division
+    Return new matrix or raise Exception"""
+
+
 def matrix_divided(matrix, div):
+    """validation"""
     if not all(
             isinstance(row, list) and all(
-                isinstance(num, (int, float)) for num in row
+                isinstance(x, (int, float)) for x in row
                 ) for row in matrix
             ):
         raise TypeError(
@@ -15,7 +22,7 @@ def matrix_divided(matrix, div):
 
     if div == 0:
         raise ZeroDivisionError("division by zero")
-
-    result = [[round(num / div, 2) for num in row] for row in matrix]
+    """create matrix"""
+    result = [[round(x / div, 2) for x in row] for row in matrix]
 
     return result

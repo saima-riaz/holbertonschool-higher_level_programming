@@ -1,25 +1,23 @@
 #!/usr/bin/python3
-""""
-    prints a text with 2 new lines after each of these characters: ., ? and :
-    otherrwise raise typeerror exception"""
+""" function that prints a text """
 
 
 def text_indentation(text):
-    """ validation """
+    """ print texte """
 
+    punctuation = [".", "?", ":"]
+    value = False
     if not isinstance(text, str):
-        raise TypeError("text must be a string")
-
-    """ create a list of my separators and copy text in new text """
-    separators = ('.', '?', ':')
-    current_line = ""
-
-    for char in text:
-        current_line += char
-        if char in separators:
-            print(current_line.strip())
+        raise TypeError('text must be a string')
+    for i in text:
+        if i in punctuation:
+            print(i)
             print()
-            current_line = ""
-
-    if current_line:
-        print(current_line.strip())
+            value = True
+        else:
+            if value is False:
+                print(i, end="")
+            else:
+                if i != " ":
+                    print(i, end="")
+                    value = False

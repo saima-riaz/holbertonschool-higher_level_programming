@@ -6,22 +6,26 @@
 
 
 def matrix_divided(matrix, div):
-    if not all(
-            isinstance(row, list) and all(
-                isinstance(num, (int, float)) for num in row
-                ) for row in matrix
-            ):
-        raise TypeError(
-                "matrix must be a matrix (list of lists) of integers/floats"
-                )
-    if len(set(len(row) for row in matrix)) > 1:
-        raise TypeError("Each row of the matrix must have the same size")
-    if not isinstance(div, (int, float)):
+    """ validation div """
+    if type(div) not in [int, float]:
         raise TypeError("div must be a number")
-
     if div == 0:
         raise ZeroDivisionError("division by zero")
 
-    result = [[round(num / div, 2) for num in row] for row in matrix]
-
-    return result
+    """ validation matrix """
+    if not matrix:
+        raise TypeError("matrix must be a matrix (list of lists) "
+                        "of integers/floats")
+    lenrow = len(matrix[0])
+    for row in matrix:
+        if type(row) is not list:
+            raise TypeError("matrix must be a matrix (list of lists) "
+                            "of integers/floats")
+        if len(row) != lenrow:
+            raise TypeError("Each row of the matrix must have the same size")
+        for item in row:
+            if type(item) not in [int, float]:
+                raise TypeError("matrix must be a matrix (list of lists) "
+                                "of integers/floats")
+    """ create new matrix """
+    return ([list(map(lambda x: round(x / div, 2), row)) for row in matrix])

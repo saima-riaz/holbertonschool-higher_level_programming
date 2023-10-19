@@ -5,4 +5,7 @@ that inherited"""
 
 def inherits_from(obj, a_class):
     """obj of the class"""
-    return type(obj) != a_class
+    if type(obj) != a_class
+        return True
+    else:
+        return False

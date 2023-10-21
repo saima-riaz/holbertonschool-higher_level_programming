@@ -4,23 +4,21 @@
 
 
 import sys
+imoort os
 """ import all module """
 
+json_filename = 'add_item.json'
 
-save = __import__('5-save_to_json_file').save_to_json_file
-load = __import__('6-load_from_json_file').load_from_json_file
+# Check if the JSON file exists and load its content, if any
+if os.path.exists(json_filename):
+    with open(json_filename, 'r') as file:
+        my_list = eval(file.read())
+else:
+    my_list = []
 
+# Append all command-line arguments to the list
+my_list.extend(sys.argv[1:])
 
-def lists(argument):
-    """ add argument"""
-    try:
-        value = load("add_item.json")
-    except FileNotFoundError:
-        value = []
-
-    value += argument
-    save(value, "add_item.json")
-
-
-argument = sys.argv[1:]
-lists(argument)
+# Save the updated list to the JSON file
+with open(json_filename, 'w') as file:
+    file.write(repr(my_list))

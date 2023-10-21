@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-"""Script to add arguments to a Python list and save it as JSON """
-
+"""
+Script to add arguments to a Python list and save it as JSON
+"""
 
 import sys
-imoort os
+import os
 
 # Name of the JSON file to save the list
 json_filename = 'add_item.json'

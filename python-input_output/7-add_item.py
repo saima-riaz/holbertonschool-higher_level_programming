@@ -5,8 +5,8 @@
 
 import sys
 imoort os
-""" import all module """
 
+# Name of the JSON file to save the list
 json_filename = 'add_item.json'
 
 # Check if the JSON file exists and load its content, if any

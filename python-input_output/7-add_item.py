@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """Script to add arguments to a Python list and save it as JSON """
 
 

@@ -19,8 +19,8 @@ class Rectangle(Base):
 
         constructor of the parent cls(Base)called using super().__init__(id).
         """
-        super().__init__(id)
         self.__width = width
         self.__height = height
         self.__x = x
         self.__y = y
+        super().__init__(id)

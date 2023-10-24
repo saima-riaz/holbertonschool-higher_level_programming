@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-
+"""define class """
 from models.base import Base
-""" define class """
+
 
 class Rectangle(Base):
     """ child class """

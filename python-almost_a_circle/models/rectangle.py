@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-""" import modles """
 
 from models.base import Base
 """ define class """

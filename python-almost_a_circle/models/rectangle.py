@@ -15,6 +15,7 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
+
 class Rectangle(Base):
     """ child class """
 
@@ -36,4 +37,3 @@ class Rectangle(Base):
         self.__x = x
         self.__y = y
         super().__init__(id)
-

@@ -1,14 +1,13 @@
 #!/usr/bin/python3
-""" define class """
+""" first class base """
 
 
 class Base:
-    """ define class Base """
+    """ base class """
+
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """ define class constructor """
-
         if id is not None:
             self.id = id
         else:

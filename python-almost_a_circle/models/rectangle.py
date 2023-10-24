@@ -13,6 +13,7 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
+
 class Rectangle(Base):
     """define class Rectangle"""
 
@@ -21,4 +22,5 @@ class Rectangle(Base):
         self.__height = height
         self.__x = x
         self.__y = y
+        """called super class"""
         super().__init__(id)

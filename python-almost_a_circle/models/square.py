@@ -7,7 +7,7 @@ class Square(Rectangle):
     """ define class """
 
     def __init__(self, size, x=0, y=0, id=None):
-        super().__init__(size, size, id, x, y)
+        super().__init__(size, size, id, x, y, id)
         self.size = size
 
     def __str__(self):
@@ -16,17 +16,18 @@ class Square(Rectangle):
     
     @property
     def size(self):
-        return(self.__width)
+        return(self.width)
 
     @size.setter
     def size(self, value):
         """ size """
-        self.__width = value
-        self.__height = value
+        self.width = value
+        self.height = value
 
     def update(self, *args, **kwargs):
         """ update attribut"""
         if args:
+
             if len(args) >= 1:
                 self.id = args[0]
             if len(args) >= 2:

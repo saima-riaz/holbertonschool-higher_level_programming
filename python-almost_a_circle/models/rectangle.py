@@ -99,8 +99,10 @@ class Rectangle(Base):
 
     def display(self):
         """  adding the public method """
+        for _ in range(self.__y):
+            print()
         for i in range(self.height):
-            print("#" * self.width)
+            print(" " * self.__x + "#" * self.__width)
 
     def __str__(self):
         """ overriding the __str__ method """
@@ -111,13 +113,17 @@ class Rectangle(Base):
 
     def update(self, *args):
         """ public method that assigns argument to each attribute """
-        if len(args) >= 1:
-            self.id = args[0]
+        if args:
+            if len(args) >= 1:
+                self.id = args[0]
             if len(args) >= 2:
                 self.width = args[1]
-                if len(args) >= 3:
-                    self.height = args[2]
-                    if len(args) >= 4:
-                        self.x = args[3]
-                        if len(args) >= 5:
-                            self.y = args[4]
+            if len(args) >= 3:
+                self.height = args[2]
+            if len(args) >= 4:
+                self.x = args[3]
+            if len(args) >= 5:
+                self.y = args[4]
+        else:
+            for key, value in kwagrs.items():
+                setattr(self, key, value)

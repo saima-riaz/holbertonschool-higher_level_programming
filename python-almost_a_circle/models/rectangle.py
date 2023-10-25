@@ -111,8 +111,8 @@ class Rectangle(Base):
                 f"{self.x}/{self.y} - {self.width}/{self.height}"
         )
 
-    def update(self, *args):
-        """ public method that assigns argument to each attribute """
+    def update(self, *args, **kwargs):
+        """ update the attribute """
         if args:
             if len(args) >= 1:
                 self.id = args[0]
@@ -125,5 +125,5 @@ class Rectangle(Base):
             if len(args) >= 5:
                 self.y = args[4]
         else:
-            for key, value in kwagrs.items():
+            for key, value in kwargs.items():
                 setattr(self, key, value)

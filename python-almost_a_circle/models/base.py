@@ -31,3 +31,11 @@ class Base:
                 list_of_dict.append(obj.to_dictionary())
         with open(filename, "w", encoding="UTF-8") as file:
             file.write(cls.to_json_string(list_of_dict))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """covert a json"""
+        if json_string is None or len(json_string) == 0:
+            return []
+        else:
+            return json.loads(json_string)

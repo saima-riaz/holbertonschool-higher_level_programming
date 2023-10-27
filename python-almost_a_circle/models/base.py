@@ -47,5 +47,5 @@ class Base:
             obj = cls(2, 3)
         else:
             obj = cls(3)
-            obj.update(**dictionary)
-            return obj
+        obj.update(**dictionary)
+        return obj

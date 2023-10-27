@@ -42,6 +42,7 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
+        """ Create a new instance of the class from a dictionary """
         if cls.__name__ == "Rectangle":
             obj = cls(2, 3)
         else:

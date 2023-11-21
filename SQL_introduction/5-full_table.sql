@@ -1,2 +1,2 @@
---script that print the following description of the table first_table
+-- prints the full description of the table first_table from the database hbtn_0c_0 in your MySQL servere
 SHOW CREATE TABLE first_table;

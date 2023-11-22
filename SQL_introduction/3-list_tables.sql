@@ -1,2 +1,2 @@
---script that show  all the tables 
+-- show all tables 
 SHOW TABLES;
